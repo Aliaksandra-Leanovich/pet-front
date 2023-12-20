@@ -3,5 +3,6 @@ export enum routes {
   USERS = "/users",
   PRODUCT = "/product",
   ABOUT = "/about",
+  BLOG = "/blog",
   NOT_FOUND = "*",
 }
