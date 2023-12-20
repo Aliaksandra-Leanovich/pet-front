@@ -13,8 +13,8 @@ export const Links = () => {
           returnObjects: true,
           defaultValue: [],
         }) as []
-      ).map(({ name }: ILink) => (
-        <LinkSC key={name} to="/">
+      ).map(({ name, link }: ILink) => (
+        <LinkSC key={name} to={link}>
           {name}
         </LinkSC>
       ))}

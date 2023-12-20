@@ -14,8 +14,8 @@ export const BlockCategories = () => {
             returnObjects: true,
             defaultValue: [],
           }) as []
-        ).map(({ name }: IItem) => (
-          <CategorySC to="/" key={name}>
+        ).map(({ name, link }: IItem) => (
+          <CategorySC to={link} key={name}>
             {name}
           </CategorySC>
         ))}

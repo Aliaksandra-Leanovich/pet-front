@@ -17,7 +17,7 @@ export const Header = () => {
     <StyledHeaderSC>
       <WrapperSC>
         <ContainerBottomSC>
-          <LogoContainerSC>
+          <LogoContainerSC href="/">
             <img src={Logo} alt="" />
           </LogoContainerSC>
           <TopNavigation isOpen={isOpen} />
