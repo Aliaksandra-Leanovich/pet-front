@@ -1,23 +1,47 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React, { Component } from "react";
 import { LinkSC, LinksContainerSC } from "./style";
 import { ILink } from "./types";
 
-export const Links = () => {
-  const { t } = useTranslation();
+class Links extends Component<any, any> {
+  state = {
+    activeLink: "",
+  };
 
-  return (
-    <LinksContainerSC>
-      {(
-        t("nav", {
-          returnObjects: true,
-          defaultValue: [],
-        }) as []
-      ).map(({ name, link }: ILink) => (
-        <LinkSC key={name} to={link}>
-          {name}
-        </LinkSC>
-      ))}
-    </LinksContainerSC>
-  );
-};
+  setActive = (link: string) => {
+    this.setState({ activeLink: link });
+  };
+
+  render() {
+    const links: ILink[] = [
+      {
+        name: "Shop",
+        link: "/",
+      },
+      {
+        name: "Blog",
+        link: "/blog",
+      },
+      {
+        name: "Our Story",
+        link: "/about",
+      },
+    ];
+
+    return (
+      <LinksContainerSC>
+        {links.map(({ name, link }: ILink) => (
+          <LinkSC
+            key={name}
+            to={link}
+            onClick={() => this.setActive(link)}
+            isActive={this.state.activeLink === link}
+          >
+            {name}
+          </LinkSC>
+        ))}
+      </LinksContainerSC>
+    );
+  }
+}
+
+export default Links;

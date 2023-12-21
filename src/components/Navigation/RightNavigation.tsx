@@ -1,7 +1,7 @@
 import React from "react";
-import { Navigation } from "./Navigation";
 import { ContainerRightSC } from "./style";
 import { INavigationProps } from "./type";
+import Navigation from "./Navigation";
 
 export const RightNavigation = ({ isOpen }: INavigationProps) => {
   return (

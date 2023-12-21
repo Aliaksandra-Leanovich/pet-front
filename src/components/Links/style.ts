@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { media } from "../../ui";
 import styled from "@emotion/styled";
 
+interface LinkProps {
+  isActive: boolean;
+}
+
 export const LinksContainerSC = styled.div`
   display: flex;
   column-gap: 25px;
@@ -13,7 +17,7 @@ export const LinksContainerSC = styled.div`
   }
 `;
 
-export const LinkSC = styled(Link)`
+export const LinkSC = styled(Link)<LinkProps>`
   font-size: 18px;
   line-height: 27px;
   padding-bottom: 6px;
@@ -21,6 +25,8 @@ export const LinkSC = styled(Link)`
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.5s ease-out;
+  border-bottom: 2px solid
+    ${({ isActive }) => (isActive ? "black" : "transparent")};
 
   &:hover {
     cursor: pointer;

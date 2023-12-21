@@ -4,7 +4,6 @@ import { IBurgerProps } from "./types";
 export const Burger = ({ isOpen, setOpen }: IBurgerProps) => {
   const handleClick = () => {
     setOpen(!isOpen);
-
     document.body.style.overflow = !isOpen ? "hidden" : "auto";
   };
   return (

@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { ContainerSC, WrapperSC } from "./style";
-import { Header } from "../Header/Header";
+
 import { Footer } from "../Footer/Footer";
+import Header from "../Header/Header";
 
 export const MainTemplate = () => {
   return (
@@ -9,7 +10,7 @@ export const MainTemplate = () => {
       <ContainerSC>
         <Header />
         <Outlet />
-        <Footer />
+        <Footer inputPlaceholder="Enter your email for updates." />
       </ContainerSC>
     </WrapperSC>
   );

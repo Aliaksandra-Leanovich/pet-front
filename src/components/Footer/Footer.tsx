@@ -12,14 +12,16 @@ import Facebook from "../../assets/icons/facebook.svg";
 import Instagram from "../../assets/icons/insta.svg";
 import Twiter from "../../assets/icons/twit.svg";
 
-export const Footer = () => {
+export const Footer = ({
+  inputPlaceholder = "Give an email, get the newsletter.",
+}) => {
   return (
     <WrapperSC>
       <ContainerSC>
         <BlockSC>
           <BlockCategories />
           <BlockFormSC>
-            <InputSC placeholder="Give an email, get the newsletter." />
+            <InputSC placeholder={inputPlaceholder} />
             <IconsContainerSC>
               <img src={Linkedin} alt="" />
               <img src={Facebook} alt="" />

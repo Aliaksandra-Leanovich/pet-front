@@ -6,5 +6,5 @@ import { Orders } from "../components/Orders/Orders";
 
 export const Account = () => {
   const { isAuthorized } = useAppSelector(getUserInfo);
-  return isAuthorized ? <AuthFormComponent /> : <Orders />;
+  return !isAuthorized ? <AuthFormComponent /> : <Orders />;
 };
