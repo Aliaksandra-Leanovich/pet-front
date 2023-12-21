@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { media } from "../../ui";
 import { IStylesProps } from "../Burger/types";
+import { Link } from "react-router-dom";
 
 export const StyledNavigationSC = styled.nav<IStylesProps>`
   display: flex;
@@ -56,7 +57,17 @@ export const ContainerTopNavigationSC = styled.div`
   }
 `;
 
-export const IconSC = styled.button`
+export const BorderSC = styled.div`
+  height: 17px;
+  width: 1px;
+  border-left: 1px solid #707070;
+
+  ${media.LAPTOP} {
+    display: none;
+  }
+`;
+
+export const IconSC = styled(Link)`
   &:hover {
     svg {
       path {
@@ -69,16 +80,6 @@ export const IconSC = styled.button`
     svg {
       path {
         fill: ${(props) => props.theme.color.labelSlider};
-      }
-    }
-  }
-`;
-
-export const IconFavoriteSC = styled.div`
-  &:hover {
-    svg {
-      path {
-        stroke: ${(props) => props.theme.color.labelSlider};
       }
     }
   }

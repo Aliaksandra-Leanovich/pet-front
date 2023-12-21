@@ -1,8 +1,7 @@
 export enum routes {
   HOME = "/",
-  USERS = "/users",
-  PRODUCT = "/product",
   ABOUT = "/about",
   BLOG = "/blog",
+  ACCOUNT = "/account",
   NOT_FOUND = "*",
 }
