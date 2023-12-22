@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Orders = () => {
-  return <div>Orders</div>;
+  return <div>orders</div>;
 };
