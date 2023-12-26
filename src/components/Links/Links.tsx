@@ -15,7 +15,7 @@ class Links extends Component<any, any> {
     const links: ILink[] = [
       {
         name: "Shop",
-        link: "/",
+        link: "/catalog",
       },
       {
         name: "Blog",

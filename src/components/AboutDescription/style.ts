@@ -84,5 +84,6 @@ export const ImageSc = styled.div`
 
   img {
     border-radius: 8px;
+    width: 100%;
   }
 `;

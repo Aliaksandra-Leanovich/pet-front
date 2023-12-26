@@ -10,10 +10,10 @@ import {
   TitleSC,
   WrapperSC,
 } from "./style";
-import Blog1 from "../../assets/icons/blog1.jpg";
-import Blog2 from "../../assets/icons/blog2.png";
-import Blog3 from "../../assets/icons/blog3.png";
-import Blog4 from "../../assets/icons/blog4.png";
+import Blog1 from "../../assets/icons/blog1.webp";
+import Blog2 from "../../assets/icons/blog2.avif";
+import Blog3 from "../../assets/icons/blog3.webp";
+import Blog4 from "../../assets/icons/blog4.webp";
 
 export const BlogDescription = () => {
   return (

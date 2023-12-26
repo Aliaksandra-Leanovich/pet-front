@@ -61,11 +61,12 @@ export const TitleSC = styled.p`
 `;
 
 export const ImageSc = styled.div`
-  width: 100%;
+  width: 450px;
   border-radius: 8px;
 
   img {
     border-radius: 8px;
+    width: 100%;
   }
 `;
 

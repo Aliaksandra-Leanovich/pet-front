@@ -9,7 +9,7 @@ import {
   TitleSC,
   WrapperSC,
 } from "./style";
-import AboutImage1 from "../../assets/icons/about1.jpg";
+import AboutImage1 from "../../assets/icons/about1.webp";
 import AboutImage2 from "../../assets/icons/about2.jpg";
 
 export const AboutDescription = () => {

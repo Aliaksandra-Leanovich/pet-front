@@ -7,6 +7,9 @@ import { PrivateRoute } from "../utils";
 import { About } from "../pages/About";
 import { Blog } from "../pages/Blog";
 import { Account } from "../pages/Account";
+import { ProductDetails } from "../pages/Product";
+import { Cart } from "../pages/Cart";
+import { Catalog } from "../pages/Catalog";
 
 export const AppRouter = () => {
   return (
@@ -16,11 +19,16 @@ export const AppRouter = () => {
         <Route path={routes.ABOUT} element={<About />} />
         <Route path={routes.BLOG} element={<Blog />} />
         <Route path={routes.ACCOUNT} element={<Account />} />
-      </Route>
+        <Route path={routes.CATALOG} element={<Catalog />} />
+        <Route
+          path={routes.PRODUCTDETAILS}
+          element={<ProductDetails />}
+        ></Route>
 
-      {/* <Route element={<PrivateRoute />}>
-        <Route path={routes.USERS} element={<Users />} />
-      </Route> */}
+        <Route element={<PrivateRoute />}>
+          <Route path={routes.CART} element={<Cart />} />
+        </Route>
+      </Route>
     </Routes>
   );
 };

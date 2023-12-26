@@ -27,7 +27,6 @@ export const Quotes = () => {
 
         if (result) {
           setCatFacts(result.data);
-          console.log(catFacts);
         }
       } catch (error) {
         console.error("Error fetching  facts:", error);
