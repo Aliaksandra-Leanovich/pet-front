@@ -46,7 +46,6 @@ export const LoginComponent = () => {
       if (response.ok) {
         setUserEmailToStorage(data.email);
         navigate(routes.HOME);
-        console.log("Registration successful:", result);
       } else {
         console.error("Registration failed:", result.message);
       }

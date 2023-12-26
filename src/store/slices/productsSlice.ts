@@ -19,7 +19,6 @@ export const featchProducts = createAsyncThunk<IProduct[]>(
   async () => {
     const newProducts = await productsApi.getProducts();
 
-    console.log("store", newProducts);
     return newProducts;
   }
 );
