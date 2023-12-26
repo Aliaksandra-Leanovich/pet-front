@@ -5,9 +5,8 @@ const StyledBookItem = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 16px;
-  max-width: 352px;
+  max-width: 300px;
   cursor: pointer;
-
   transition: all 0.5s ease-out;
 
   &:hover {
@@ -20,11 +19,18 @@ const StyledLink = styled(Link)`
 `;
 
 const BookImage = styled.img`
-  max-width: 226px;
+  width: 300px;
+  border-radius: 8px;
 `;
 
 const BookTitle = styled.h3`
   text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
 `;
 
 const BookSubtitle = styled.p`
@@ -34,6 +40,12 @@ const BookSubtitle = styled.p`
 
 const BookPrice = styled.h3`
   margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a18a68;
 `;
 
 const HeartContainer = styled.div`

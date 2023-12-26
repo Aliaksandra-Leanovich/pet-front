@@ -21,8 +21,7 @@ export const ListItem = ({ product }: IBook) => {
           alt={product.name}
         />
         <BookTitle>{product.name}</BookTitle>
-        <BookSubtitle>{product.description}</BookSubtitle>
-        <BookPrice>{!product.price ? "Free" : product.price}</BookPrice>
+        <BookPrice>${product.price}</BookPrice>
       </StyledLink>
     </StyledBookItem>
   );
