@@ -13,11 +13,13 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { getAllProducts } from "../store/selectors/productsSelectors";
 import { useEffect } from "react";
 import { featchProducts } from "../store/slices/productsSlice";
+import { getUserInfo } from "../store/selectors";
 
 export const Home = () => {
   const { show, showModal } = useShowModal();
   const products = useAppSelector(getAllProducts);
   const dispatch = useAppDispatch();
+  const user = useAppSelector(getUserInfo);
 
   useEffect(() => {
     dispatch(featchProducts());
@@ -26,7 +28,6 @@ export const Home = () => {
   const handleCreateProduct = async (newProduct: INewProduct) => {
     try {
       await productsApi.createProduct(newProduct);
-
       dispatch(featchProducts());
     } catch (error) {
       console.error("Error creating product:", error);
@@ -38,7 +39,11 @@ export const Home = () => {
       <ContainerSC>
         <TitleSC>
           <CartTitleSC>Shop The Latest</CartTitleSC>
-          <ButtonSC onClick={showModal}>Create Product</ButtonSC>
+
+          {user.isAdmin === "admin" && (
+            <ButtonSC onClick={showModal}>Create Product</ButtonSC>
+          )}
+
           <LinkSC to="/catalog">View all</LinkSC>
         </TitleSC>
         <List products={products.products} />

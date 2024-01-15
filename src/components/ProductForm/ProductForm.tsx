@@ -27,7 +27,9 @@ const ProductForm: React.FC<ProductFormProps> = ({
     setEditedProduct(selectedProduct);
   }, [selectedProduct]);
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: React.MouseEvent) => {
+    event.preventDefault();
+
     if (editedProduct) {
       onSubmit(editedProduct);
     }

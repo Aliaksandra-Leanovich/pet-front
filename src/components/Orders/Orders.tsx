@@ -9,10 +9,8 @@ export const Orders: React.FC = () => {
     const requestOptions: RequestInit = {
       method: "GET",
       headers: {
-        Cookie:
-          "connect.sid=s%3AUWOHaH3JiMQ3l14Cc8ER3mVbx7af_Q0-.xRDD3%2F9j%2FdBQrgkycI%2Bvi%2BxFBQ6e0wqHJ328G1rb3Dg; Path=/; HttpOnly",
-        Connection: "keep-alive",
-        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
       },
       credentials: "include",
     };

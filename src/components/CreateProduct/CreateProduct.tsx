@@ -50,7 +50,8 @@ const CreateProduct: React.FC<IProductFormProps> = ({ onSubmit }) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: React.MouseEvent) => {
+    event.preventDefault();
     onSubmit(product);
 
     setProduct({

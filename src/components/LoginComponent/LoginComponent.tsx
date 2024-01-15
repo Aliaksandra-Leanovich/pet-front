@@ -11,6 +11,20 @@ import { useNavigate } from "react-router-dom";
 import { setUserEmail } from "../../store/slices/userSlice";
 import { routes } from "../../routes";
 
+interface IUser {
+  user: {
+    role: string;
+    orders: [];
+    _id: string;
+    email: string;
+    email_is_verified: boolean;
+    password: string;
+    date: string;
+    __v: number;
+  };
+  message: string;
+}
+
 export const LoginComponent = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -37,14 +51,22 @@ export const LoginComponent = () => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(data),
         }
       );
 
-      const result = await response.json();
+      const result: IUser = await response.json();
 
       if (response.ok) {
-        setUserEmailToStorage(data.email);
+        localStorage.setItem("userEmail", result.user.email);
+        localStorage.setItem("role", result.user.role);
+        dispatch(
+          setUserEmail({
+            email: result.user.email,
+            userDetails: result.user.role,
+          })
+        );
         navigate(routes.HOME);
       } else {
         console.error("Registration failed:", result.message);
@@ -52,11 +74,6 @@ export const LoginComponent = () => {
     } catch (error) {
       console.error("Error during registration:", error);
     }
-  };
-
-  const setUserEmailToStorage = (email: string) => {
-    localStorage.setItem("userEmail", email);
-    dispatch(setUserEmail(email));
   };
 
   return (
