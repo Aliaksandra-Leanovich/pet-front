@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
 
+export const ContainerSC = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
 const StyledBookList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -12,27 +17,50 @@ const StyledBookList = styled.ul`
   padding: 0;
   margin: 0 auto;
 `;
-const StyledLoading = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 100%;
-  height: 100vh;
-`;
+export { StyledBookList };
 
-const ErrorContainer = styled.div`
+export const SortConatinerSC = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
+  row-gap: 20px;
 `;
 
-const ErrorTitle = styled.p``;
-
-const ErrorText = styled.p`
-  margin-bottom: 240px;
+export const InputsContainerSC = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
 `;
 
-export { ErrorText, ErrorTitle, StyledBookList, ErrorContainer, StyledLoading };
+export const InputSC = styled.input`
+  font-size: 14px;
+  overflow: hidden scroll;
+  font-family: Poppins, sans-serif;
+  max-height: 300px;
+  min-height: 28px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px 14px;
+  word-break: break-word;
+  border: 1px solid rgb(226, 227, 229);
+`;
+
+export const SelectSC = styled.select`
+  font-size: 14px;
+  overflow: hidden scroll;
+  font-family: Poppins, sans-serif;
+  max-height: 300px;
+  min-height: 28px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  resize: vertical;
+  padding: 10px 14px;
+  border: 1px solid rgb(226, 227, 229);
+`;
+
+export const SelectSCContainerSC = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  column-gap: 10px;
+`;

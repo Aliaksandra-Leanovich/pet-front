@@ -35,6 +35,7 @@ export const ButtonSC = styled.button<IStylesProps>`
   width: 20px;
   border: none;
   cursor: pointer;
+  background: transparent;
 
   svg {
     path {

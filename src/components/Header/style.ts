@@ -46,9 +46,13 @@ export const ContainerBottomSC = styled.div`
 `;
 
 export const LogoContainerSC = styled.a`
-  max-width: 124px;
-  width: 100%;
   cursor: pointer;
+  width: 200px;
+  text-decoration: none;
+  font-size: 40px;
+  margin: 2px;
+  font-weight: bold;
+  color: black;
 `;
 
 export const PhoneNumberSC = styled.p`

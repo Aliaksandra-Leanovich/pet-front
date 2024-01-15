@@ -1,14 +1,24 @@
 import styled from "@emotion/styled";
 import { List } from "../components/List/List";
 import { media } from "../ui";
-import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { getAllProducts } from "../store/selectors/productsSelectors";
+import { useEffect } from "react";
+import { featchProducts } from "../store/slices/productsSlice";
 
 export const Catalog = () => {
+  const products = useAppSelector(getAllProducts);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(featchProducts());
+  }, [dispatch]);
+
   return (
     <WrapperSC>
       <ContainerSC>
         <CartTitleSC>Shop The Latest</CartTitleSC>
-        <List />
+        <List products={products.products} />
       </ContainerSC>
     </WrapperSC>
   );

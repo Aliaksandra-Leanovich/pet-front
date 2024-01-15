@@ -45,9 +45,11 @@ export const CartList = ({ products }: ICart) => {
 
   useEffect(() => {
     let totalAmount = 0.0;
+
     products.forEach((product) => {
       totalAmount += Number(product.price);
     });
+
     setTotal(totalAmount);
   }, [products]);
 
@@ -58,6 +60,7 @@ export const CartList = ({ products }: ICart) => {
           return <CartItem key={product._id} product={product} />;
         })}
       </StyledListCart>
+
       <StyledTotal>
         <TitleTotal>Cart totals</TitleTotal>
         <StyledSubtotal>
@@ -68,7 +71,7 @@ export const CartList = ({ products }: ICart) => {
       </StyledTotal>
       <Portal>
         <Modal
-          children={"We’ve received your order"}
+          children={<p> We’ve received your order </p>}
           show={show}
           handleClose={showModal}
         />

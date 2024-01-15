@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Trash from "../../assets/icons/cross.svg";
-
 import { useAppDispatch } from "../../store/hooks/hooks";
-
 import {
   AdditionalContainer,
   BookImage,

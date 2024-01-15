@@ -4,6 +4,8 @@ export interface IProduct {
   description: string;
   price: number;
   quantity: string;
+  __v: number;
+  images: string[];
 }
 
 export interface IProductsApi {
@@ -15,6 +17,8 @@ export interface IProductsApi {
     description: string;
     price: number;
     quantity: string;
+    images: string[];
+    __v: number;
   };
 }
 

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IStylesProps {
   show?: boolean;
 }
@@ -5,5 +7,5 @@ export interface IStylesProps {
 export interface IModalProps {
   handleClose: VoidFunction;
   show: boolean;
-  children: string;
+  children: ReactNode;
 }

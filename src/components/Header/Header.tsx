@@ -8,7 +8,6 @@ import {
   StyledHeaderSC,
   WrapperSC,
 } from "./style";
-import Logo from "../../assets/icons/logo.svg";
 
 interface HeaderState {
   isOpen: boolean;
@@ -30,9 +29,7 @@ class Header extends Component<{}, HeaderState> {
       <StyledHeaderSC>
         <WrapperSC>
           <ContainerBottomSC>
-            <LogoContainerSC href="/">
-              <img src={Logo} alt="" />
-            </LogoContainerSC>
+            <LogoContainerSC href="/">i-Store</LogoContainerSC>
             <TopNavigation isOpen={isOpen} />
             <RightNavigation isOpen={isOpen} />
             <Burger isOpen={isOpen} setOpen={this.handleToggle} />

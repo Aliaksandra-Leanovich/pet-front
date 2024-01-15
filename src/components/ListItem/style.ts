@@ -1,13 +1,16 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { media } from "../../ui";
 
 const StyledBookItem = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
+  padding: 16px;
   max-width: 300px;
   cursor: pointer;
   transition: all 0.5s ease-out;
+  border: 1px solid black;
+  border-radius: 10px;
 
   &:hover {
     transform: translateY(-5px);
@@ -60,6 +63,71 @@ const HeartContainer = styled.div`
   }
   &:active {
     border-radius: 20px;
+  }
+`;
+
+export const ContainerSC = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+export const ButtonContainerSC = styled.div`
+  max-width: 200px;
+  width: 100%;
+`;
+
+export const ButtonsContainrSC = styled.div`
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+  justify-content: end;
+`;
+
+export const ButtonSC = styled.button`
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 18px 0;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+
+  transition:
+    background-color 0.5s ease-out,
+    color 0.5s ease-out;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+`;
+
+export const IconSC = styled.button`
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+
+  &:hover {
+    svg {
+      path {
+        fill: ${(props) => props.theme.color.labelSlider};
+      }
+    }
+  }
+
+  ${media.LAPTOP} {
+    svg {
+      path {
+        fill: ${(props) => props.theme.color.labelSlider};
+      }
+    }
   }
 `;
 

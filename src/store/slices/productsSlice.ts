@@ -11,6 +11,8 @@ const initialState = {
     description: "",
     price: 0,
     quantity: "",
+    __v: 0,
+    images: [],
   },
 } as IProductsApi;
 
